@@ -15,8 +15,7 @@ focus_follows_mouse yes
 # Right-Click+$mod to resize windows
 floating_modifier $mod
 force_focus_wrapping no
-#font pango:DejaVu Sans Mono, FontAwesome, Monoid Mono 11
-font pango: Noto Sans Regular, FontAwesome, Monoid Mono 11
+font pango: Noto Sans Regular, FontAwesome, Monoid Mono 12
 floating_maximum_size 1920 x 1080
 floating_minimum_size 85 x 85
 popup_during_fullscreen smart
@@ -31,8 +30,7 @@ show_marks yes
 #---------------------------------------------------------STARTUP PROGRAMS
 
 exec --no-startup-id /usr/bin/nm-applet
-#exec --no-startup-id blueberry-tray
-#exec --no-startup-id /usr/bin/parcellite        # Clipboard
+exec --no-startup-id blueberry-tray
 exec --no-startup-id /usr/bin/xfce4-climpan       # Clipboard
 exec --no-startup-id sleep 7 && /usr/bin/thunderbird
 exec --no-startup-id /usr/bin/numlockx
@@ -53,6 +51,11 @@ exec /usr/bin/xautolock -detectsleep -time 10 -locker "$HOME/.config/i3/i3lock/l
 	-notify 10 \
 	-notifier "notify-send -u critical -t 5000 -- 'locking screen in 10 seconds'"
 
+# autotiling script
+# https://github.com/nwg-piotr/autotiling
+# yay -S autotiling-rs
+exec_always --no-startup-autotiling-rs
+
 #----------------------------------------------------------------SCRATCHPAD
 
 bindsym $mod+minus move scratchpad 
@@ -67,11 +70,8 @@ gaps outer 5
 
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-# Reload the configuration file
 bindsym $mod+Shift+c reload 
-# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "/usr/bin/i3-nagbar -t warning -m 'You pressed the exit shortcut. This will end your X session.' \
     -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+Escape	exec --no-startup-id prompt "Exit i3?" \
@@ -88,7 +88,7 @@ bindsym $mod+q split toggle; exec /usr/bin/notify-send 'tile toggle'
 
 #--------------------------------------------------------------RUN PROGRAMS
 
-bindsym $mod+d exec --no-startup-id /usr/bin/rofi -show drun
+#bindsym $mod+d exec --no-startup-id /usr/bin/rofi -show drun
 bindsym $mod+f exec --no-startup-id /usr/bin/firefox
 bindsym $mod+i exec --no-startup-id /usr/bin/urxvt -e /usr/bin/htop 
 bindsym $mod+m exec --no-startup-id /usr/bin/wine ~/Downloads/winbox64.exe -name WinBox
@@ -132,8 +132,17 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
+# Open new empty workspace
+bindsym $mod+Shift+n exec $HOME/.config/i3/scripts/empty_workspace
+
 # Power Profile menu switch (rofi)
 bindsym $mod+Shift+t exec ~/.config/i3/scripts/power-profiles
+
+# exit-menu
+bindsym $mod+Shift+g exec ~/.config/i3/scripts/powermenu
+
+# set powersavings for display:
+exec --no-startup-id xset s 480 dpms 600 600 600
 
 #-----------------------------------------------------------------FLOATING WINDOWS
 
@@ -383,15 +392,15 @@ bar {
 	}
 }
 
-bar {
-	position top
-	output DP-5
-        #status_command /usr/bin/i3blocks -c ~/.config/i3/i3blocks/i3blocks
-        status_command /usr/bin/i3blocks -c ~/.config/i3/i3blocks/i3blocks_alt
-		colors {
-			background #111111
-	}
-}
+#bar {
+#	position top
+#	output DP-5
+#        #status_command /usr/bin/i3blocks -c ~/.config/i3/i3blocks/i3blocks
+#        status_command /usr/bin/i3blocks -c ~/.config/i3/i3blocks/i3blocks_alt
+#		colors {
+#			background #111111
+#	}
+#}
 
 #-----------------------------------------------------------------TESTING
 
@@ -399,3 +408,11 @@ bar {
 #bindsym $mod+F12 exec "notify-send Hello, i3"
 #bindsym $mod+F12 exec "notify-send \\"Hello, i3; from $USER\\""
 #!/bin/sh
+
+#-----------------------------------------------------------------ROFI
+
+#####################################
+# Application menu handled by rofi: #
+#####################################
+
+bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
