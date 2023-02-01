@@ -121,7 +121,7 @@ markup=pango
 
 # Set Power-Profile
 [ppd-status]
-command=~/.config/i3/i3blocks/scripts/ppd-status
+command=~/.config/i3/scripts/ppd-status
 interval=2
 
 [keyindicator]
