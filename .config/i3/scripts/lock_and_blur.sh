@@ -2,6 +2,7 @@
 
 # suspend message display: dunst
 /usr/bin/pkill -u "$USER" -USR1 /usr/bin/dunst
+/usr/bin/pkill -u "$USER" -USR1 /usr/bin/picom
 
 ## Lock the screen 
 # set the icon and a temporary location for the screenshot to be stored
@@ -24,6 +25,7 @@ tmpbg='/tmp/screen.png'
 rm $tmpbg
 
 # resume message display when unlocked
+/usr/bin/pkill -u "$USER" -USR2 /usr/bin/picom -cbCf
 /usr/bin/pkill -u "$USER" -USR2 /usr/bin/dunst
 
 exit 0

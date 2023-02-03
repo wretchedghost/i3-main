@@ -18,10 +18,14 @@ command=$HOME/.config/i3/i3blocks/spotify.py
 color=#81b71a
 interval=5
 
-[weather_NOAA]
-command=$HOME/.config/i3/i3blocks/weather_NOAA; [[ -z "${BLOCK_BUTTON}" ]] || wego -d 1 &
-label=
-interval=60
+#[weather_NOAA]
+#command=$HOME/.config/i3/i3blocks/weather_NOAA; [[ -z "${BLOCK_BUTTON}" ]] || wego -d 1 &
+#label=
+#interval=60
+
+[openweather]
+interval=1700
+command=$HOME/.config/i3/i3blocks/openweather
 
 [iface]
 instance=enp7s0
