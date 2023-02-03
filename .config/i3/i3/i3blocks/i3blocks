@@ -48,7 +48,7 @@ interval=10
 #color=#b0b5db
 
 [iface]
-instance=enp7s0
+instance=enp5s0
 #label=
 label=
 #color=#b0b5db
@@ -105,7 +105,7 @@ separator=true
 #label= 
 #command=date '+%a %m-%d-%y %H:%M:%S'
 #command=date '+%a %d %b %y %H:%M:%S'
-command=/usr/bin/echo "`date '+(%a) %b %d,%Y %H:%M:%S'`"; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal 
+command=/usr/bin/echo "`date '+(%a) %b %d,%Y %H:%M:%S'`"; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
 interval=1
 separator=true
 #color=#50C878
@@ -121,7 +121,7 @@ markup=pango
 
 # Set Power-Profile
 [ppd-status]
-command=~/.config/i3/scripts/ppd-status
+command=~/.config/i3/i3blocks/ppd-status
 interval=2
 
 [keyindicator]

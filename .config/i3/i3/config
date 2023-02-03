@@ -15,7 +15,8 @@ focus_follows_mouse yes
 # Right-Click+$mod to resize windows
 floating_modifier $mod
 force_focus_wrapping no
-font pango: Noto Sans Regular, FontAwesome, Monoid Mono 12
+#font pango:DejaVu Sans Mono, FontAwesome, Monoid Mono 11
+font pango: Noto Sans Regular, FontAwesome, Monoid Mono 13
 floating_maximum_size 1920 x 1080
 floating_minimum_size 85 x 85
 popup_during_fullscreen smart
@@ -31,6 +32,7 @@ show_marks yes
 
 exec --no-startup-id /usr/bin/nm-applet
 exec --no-startup-id blueberry-tray
+#exec --no-startup-id /usr/bin/parcellite        # Clipboard
 exec --no-startup-id /usr/bin/xfce4-climpan       # Clipboard
 exec --no-startup-id sleep 7 && /usr/bin/thunderbird
 exec --no-startup-id /usr/bin/numlockx
@@ -51,11 +53,6 @@ exec /usr/bin/xautolock -detectsleep -time 10 -locker "$HOME/.config/i3/i3lock/l
 	-notify 10 \
 	-notifier "notify-send -u critical -t 5000 -- 'locking screen in 10 seconds'"
 
-# autotiling script
-# https://github.com/nwg-piotr/autotiling
-# yay -S autotiling-rs
-exec_always --no-startup-autotiling-rs
-
 #----------------------------------------------------------------SCRATCHPAD
 
 bindsym $mod+minus move scratchpad 
@@ -70,8 +67,11 @@ gaps outer 5
 
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
+# Reload the configuration file
 bindsym $mod+Shift+c reload 
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+# Exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "/usr/bin/i3-nagbar -t warning -m 'You pressed the exit shortcut. This will end your X session.' \
     -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+Escape	exec --no-startup-id prompt "Exit i3?" \
@@ -88,7 +88,7 @@ bindsym $mod+q split toggle; exec /usr/bin/notify-send 'tile toggle'
 
 #--------------------------------------------------------------RUN PROGRAMS
 
-#bindsym $mod+d exec --no-startup-id /usr/bin/rofi -show drun
+bindsym $mod+d exec --no-startup-id /usr/bin/rofi -show drun
 bindsym $mod+f exec --no-startup-id /usr/bin/firefox
 bindsym $mod+i exec --no-startup-id /usr/bin/urxvt -e /usr/bin/htop 
 bindsym $mod+m exec --no-startup-id /usr/bin/wine ~/Downloads/winbox64.exe -name WinBox
@@ -98,8 +98,8 @@ bindsym $mod+x exec --no-startup-id $HOME/.config/i3/i3lock/lock_and_blur.sh
 bindsym $mod+Shift+comma exec --no-startup-id /usr/bin/autorandr mobile 
 bindsym $mod+Shift+period exec --no-startup-id /usr/bin/autorandr work
 bindsym $mod+F3 exec --no-startup-id /usr/bin/pcmanfm 
-bindsym $mod+F12 exec --no-startup-id /usr/bin/brightnessctl --output DP-7 set +20%
-bindsym $mod+F11 exec --no-startup-id /usr/bin/brightnessctl --output DP-7 set -20%
+bindsym $mod+F12 exec --no-startup-id /usr/bin/brightnessctl --output HDMI-1 set +20%
+bindsym $mod+F11 exec --no-startup-id /usr/bin/brightnessctl --output HDMI-1 set -20%
 
 # Take a screenshot with scrot
 bindsym $mod+F10 --release exec --no-startup-id /usr/bin/scrot -d 5; exec notify-send 'Taking a screenshot. 5 second timer'
@@ -132,17 +132,8 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 
-# Open new empty workspace
-bindsym $mod+Shift+n exec $HOME/.config/i3/scripts/empty_workspace
-
 # Power Profile menu switch (rofi)
 bindsym $mod+Shift+t exec ~/.config/i3/scripts/power-profiles
-
-# exit-menu
-bindsym $mod+Shift+g exec ~/.config/i3/scripts/powermenu
-
-# set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
 
 #-----------------------------------------------------------------FLOATING WINDOWS
 
@@ -195,9 +186,9 @@ set $ws10 "10:"
 
 #workspace "7:" output DP-1
 #workspace "8:" output DP-1
-workspace "3:" output DP-5
-workspace "9:" output DP-5
-workspace "10:" output DP-5
+#workspace "3:" output DP-5
+#workspace "9:" output DP-5
+#workspace "10:" output DP-5
 
 # Open applications on specific workspaces 
 assign [class="Brave"] $ws1
@@ -376,9 +367,9 @@ client.background		        #1A1A1A
 bar {
 	position top
 	output primary
-	output DP-7
+	output HDMI-1
         status_command /usr/bin/i3blocks -c ~/.config/i3/i3blocks/i3blocks
-        tray_output DP-7
+        tray_output HDMI-1
         tray_padding 2
 		colors {
 		    background #333333 # menubar color
@@ -408,11 +399,3 @@ bar {
 #bindsym $mod+F12 exec "notify-send Hello, i3"
 #bindsym $mod+F12 exec "notify-send \\"Hello, i3; from $USER\\""
 #!/bin/sh
-
-#-----------------------------------------------------------------ROFI
-
-#####################################
-# Application menu handled by rofi: #
-#####################################
-
-bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
