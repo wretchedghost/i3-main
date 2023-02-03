@@ -2,7 +2,16 @@ command=~/.config/i3/i3blocks/$BLOCK_NAME
 separator_block_width=20
 markup=pango
 
-# Spotify
+[browser]
+full_text= 
+color=#ff7f81
+command=i3-msg -q exec firefox
+
+[files]
+full_text= 
+color=#7f3fbf
+command=i3-msg -q exec thunar ~/
+
 [spotify]
 label=
 command=$HOME/.config/i3/i3blocks/spotify.py
@@ -10,56 +19,19 @@ color=#81b71a
 interval=5
 
 [weather_NOAA]
-command=$HOME/.config/i3/i3blocks/weather_NOAA
+command=$HOME/.config/i3/i3blocks/weather_NOAA; [[ -z "${BLOCK_BUTTON}" ]] || wego -d 1 &
 label=
-#LAT=32.42
-#LON=-104.23
-interval=600
-#color=#e97ac8
-#color=#bd806b
-
-[memory]
-label=
-#separator=false
-interval=30
-
-#[memory]
-#label=SWAP
-#instance=swap
-#separator=false
-#interval=30
-
-#[disk-home]
-#label=:
-#command=~/.config/i3blocks/disk_home 
-#interval=30
-#separator=false
-#color=#1793D1
-
-[disk-root]
-label= /:
-command=$HOME/.config/i3/i3blocks/disk
-interval=30
-#color=#b0b5db
-
-[temp]
-label=
-interval=10
-#color=#b0b5db
+interval=60
 
 [iface]
 instance=enp7s0
-#label=
 label=
-#color=#b0b5db
 interval=10
 separator=true
 
 [iface]
 instance=tailscale0
-#label=
 label=
-#color=#b0b5db
 interval=10
 separator=true
 
@@ -86,14 +58,25 @@ separator=true
 label=VPN:
 interval=5
 
+[disk-root]
+label= /:
+command=$HOME/.config/i3/i3blocks/disk
+interval=30
+
+[memory]
+label=
+interval=30
+
+[temp]
+label=
+interval=10
+#color=#b0b5db
+
 [load]
 label= 
-#label=Load:
 command=$HOME/.config/i3/i3blocks/load_average
 interval=2
 separator=true
-#color=#6c71c4
-#color=#b0b5db
 
 #[battery2]
 #command=$HOME/.config/i3/i3blocks/battery2
@@ -101,28 +84,27 @@ separator=true
 #interval=30
 
 [time]
-#label=
-#label= 
-#command=date '+%a %m-%d-%y %H:%M:%S'
-#command=date '+%a %d %b %y %H:%M:%S'
-command=/usr/bin/echo "`date '+(%a) %b %d,%Y %H:%M:%S'`"; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal 
+label=  
+command=/usr/bin/echo "`date '+(%a) %b %d'` <b>`date +'%H:%M:%S'`</b> "; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
 interval=1
+markup=pango
 separator=true
-#color=#50C878
-#color=#bd806b
 
 [dunst]
 command=~/.config/i3/i3blocks/dunst
 interval=once
 format=json
 markup=pango
-#min_width=50
-#align=center
 
-# Set Power-Profile
 [ppd-status]
 command=~/.config/i3/scripts/ppd-status
 interval=2
+
+[ppd_menu]
+full_text=
+#full_text=
+command=~/.config/i3/scripts/power-profiles
+#color=#407437
 
 [keyindicator]
 command=$HOME/.config/i3/i3blocks/keyindicator
@@ -138,3 +120,17 @@ markup=pango
 interval=once
 signal=11
 HIDE_WHEN_OFF=1
+
+#[pavucontrol]
+#full_text=
+#command=pavucontrol
+
+[volume-pulse] 
+command=~/.config/i3/i3blocks/volume 
+instance=Master 
+interval=1
+
+#[volume-jackplug] 
+#command=~/.config/i3/i3blocks/volume 
+#instance=Master 
+#interval=1
