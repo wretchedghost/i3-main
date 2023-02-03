@@ -45,7 +45,7 @@ exec --no-startup-id /usr/bin/conky -d -c $HOME/.config/i3/conky/conky-left
 exec --no-startup-id $HOME/.screenlayout/monitor.sh
 
 # runs notify-send in critcal mode and stays up for 10 seconds (10000 mili)
-exec /usr/bin/xautolock -detectsleep -time 10 -locker "$HOME/.config/i3/i3lock/lock_and_blur.sh" \
+exec /usr/bin/xautolock -detectsleep -time 10 -locker "$HOME/.config/i3/scripts/lock_and_blur.sh" \
 	-notify 30 \
 	-notifier "notify-send -u critical -t 10000 -- 'locking screen in 30 seconds'" \
 	-notify 10 \
@@ -93,8 +93,8 @@ bindsym $mod+f exec --no-startup-id /usr/bin/firefox
 bindsym $mod+i exec --no-startup-id /usr/bin/urxvt -e /usr/bin/htop 
 bindsym $mod+m exec --no-startup-id /usr/bin/wine ~/Downloads/winbox64.exe -name WinBox
 bindsym $mod+n exec --no-startup-id /bin/bash ~/bin/visionclientlauncher/app/visionclientlauncher.sh
-bindsym $mod+p exec --no-startup-id $HOME/.config/i3/promote-window
-bindsym $mod+x exec --no-startup-id $HOME/.config/i3/i3lock/lock_and_blur.sh
+bindsym $mod+p exec --no-startup-id $HOME/.config/i3/scripts/promote-window
+bindsym $mod+x exec --no-startup-id $HOME/.config/i3/scripts/lock_and_blur.sh
 bindsym $mod+Shift+comma exec --no-startup-id /usr/bin/autorandr mobile 
 bindsym $mod+Shift+period exec --no-startup-id /usr/bin/autorandr work
 bindsym $mod+F3 exec --no-startup-id /usr/bin/pcmanfm 
@@ -298,10 +298,10 @@ mode "resize" {
 }
 
 # Dynamic screen resizing
-bindsym $mod+Shift+u exec --no-startup-id ~/.config/i3/i3resize.sh left
-bindsym $mod+Shift+i exec --no-startup-id ~/.config/i3/i3resize.sh down
-bindsym $mod+Shift+o exec --no-startup-id ~/.config/i3/i3resize.sh up
-bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/i3resize.sh right
+bindsym $mod+Shift+u exec --no-startup-id ~/.config/i3/scripts/i3resize.sh left
+bindsym $mod+Shift+i exec --no-startup-id ~/.config/i3/scripts/i3resize.sh down
+bindsym $mod+Shift+o exec --no-startup-id ~/.config/i3/scripts/i3resize.sh up
+bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/i3resize.sh right
 
 #-------------------------------------------------------------------GROUP ACTIONS
 
