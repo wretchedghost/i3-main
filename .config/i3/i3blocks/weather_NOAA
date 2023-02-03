@@ -22,8 +22,8 @@ use Data::Dumper;
 use Getopt::Long;
 
 # Default option values
-my $lat = $ENV{LAT} || "31.42";
-my $lon = $ENV{LON} || "-103.50";
+my $lat = $ENV{LAT} || "32.42";
+my $lon = $ENV{LON} || "-104.23";
 
 sub help {
     print "Usage: weather_NOAA [-lat <latitude>] [-lon <longitude>]\n";
