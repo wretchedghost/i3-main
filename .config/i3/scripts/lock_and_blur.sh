@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 # suspend message display: dunst
+# added picom to keep some windows pop-ups from popping up (Signal, etc)
 /usr/bin/pkill -u "$USER" -USR1 /usr/bin/dunst
 /usr/bin/pkill -u "$USER" -USR1 /usr/bin/picom
 
 ## Lock the screen 
 # set the icon and a temporary location for the screenshot to be stored
-icon="$HOME/.config/i3/i3lock/lock-icon-light.png"
+icon="$HOME/.config/i3/scripts/lock-icon-light.png"
 tmpbg='/tmp/screen.png'
 
 # take a screenshot
@@ -25,6 +26,7 @@ tmpbg='/tmp/screen.png'
 rm $tmpbg
 
 # resume message display when unlocked
+# added picom to keep some windows pop-ups from popping up (Signal, etc)
 /usr/bin/pkill -u "$USER" -USR2 /usr/bin/picom -cbCf
 /usr/bin/pkill -u "$USER" -USR2 /usr/bin/dunst
 
