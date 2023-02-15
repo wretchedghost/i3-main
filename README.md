@@ -6,17 +6,21 @@ What we have here is my latest i3 config for my workstation.
 
 Here are some pictures of my screen using scrot. The wallpapers are of one my favorite places in the world, Portugal.
 
-![my workstation](./Pictures/example/2021-10-15-125753_3840x1080_scrot.png)
+![my workstation](./Pictures/example/screen.png)
 
-Rofi
+#### Rofi
 
-![my workstation](./Pictures/example/rofi.png)
+![my workstation](./Pictures/example/rofi_custom.png)
 
-i3Blocks
+#### i3Blocks
 
 ![my workstation](./Pictures/example/i3blocks.png)
 
-#### Colors
+#### urxvt Terminal
+
+![my_terminal](./Pictures/example/neofetch.png)
+
+#### Color Chooser
 [https://htmlcolorcodes.com/colors/](https://htmlcolorcodes.com/colors/)
 
 #### Prerequirements and recomendations
