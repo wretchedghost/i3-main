@@ -22,6 +22,8 @@ I obsfucated my public IP even though its my tailscale public IP for obvious rea
 
 ![my_terminal](./Pictures/example/neofetch.png)
 
+#### Theme
+
 ![my_theme](./Pictures/example/lxappearance1.png)
 ![my_theme](./Pictures/example/lxappearance2.png)
 
@@ -72,6 +74,3 @@ I obsfucated my public IP even though its my tailscale public IP for obvious rea
 1. copy-in-place libreoffice-writer.desk into ~/.local/share/applications/libreoffice-writer.desktop
 
 ##### To-Be-Fixed
-
-1. gsimplecal has a weird bug where it will stay popped-up even when you click off of it. Getting rid of it is as simple as hitting $mod+Shift+q when hovered over gsimplecal.
-2. Sometimes the weather API will crash and give an error. I don't know why this happens only sometimes.
