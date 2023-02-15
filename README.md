@@ -54,9 +54,9 @@ i3Blocks
 
 ####Step to make your setup to look like mine
 
-1. lightdm (If you want a desktop manager greeter)
-2. lightdm-slick-greeter (use my config in lightdm and place in /etc/lightdm/)
-3. place background.jpg in /usr/share/pixmaps/
+1. install lightdm lightdm-slick-greeter
+2. place background.jpg in /usr/share/pixmaps/
+3. copy-in-place libreoffice-writer.desk into ~/.local/share/applications/libreoffice-writer.desktop
 
 ##### To-Be-Fixed
 
