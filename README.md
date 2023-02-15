@@ -4,7 +4,7 @@ What we have here is my latest i3 config for my workstation.
 
 #### Pics
 
-Here are some pictures of my screen using scrot. The wallpapers are of one my favorite places in the world, Portugal.
+Here are some pictures of my screen using scrot. The wallpapers are of one my favorite places in the world, Portugal. Don't mind the gap on the left screen. That is due to my left screen being a 1920x1080 (16:9) while my right screen is a 1920x1200 (16:10).
 
 ![my workstation](./Pictures/example/screen.png)
 
