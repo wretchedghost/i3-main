@@ -52,11 +52,16 @@ i3Blocks
 
 * acpi (Only needed if you have a laptop)
 
-####Step to make your setup to look like mine
+#### Step to make your setup to look like mine
 
 1. install lightdm lightdm-slick-greeter
 2. place background.jpg in /usr/share/pixmaps/
-3. copy-in-place libreoffice-writer.desk into ~/.local/share/applications/libreoffice-writer.desktop
+3. copy lightdm/ into /etc/lightdm/
+
+![/images/lightdm.png](/images/lightdm.png)
+
+> Optional
+1. copy-in-place libreoffice-writer.desk into ~/.local/share/applications/libreoffice-writer.desktop
 
 ##### To-Be-Fixed
 
