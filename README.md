@@ -38,6 +38,7 @@ i3Blocks
 * neofetch (Shows hardware and other important info in the terminal)
 * ttf-font-awesome (For all the cool image logos)
 * ttf-dejavu (My standard font for everything else)
+* ttf-monoid (A great font for the terminal)
 * gsimplecal (Simple GUI calendar)
 * galculator (Gnome calculator)
 * conky (Used to show clock on main screen)
@@ -51,12 +52,11 @@ i3Blocks
 
 * acpi (Only needed if you have a laptop)
 
-#### Optional
+####Step to make your setup to look like mine
 
-* ttf-monoid (A great font for the terminal)
-* lightdm (If you want a desktop manager greeter)
-    * lightdm-slick-greeter (use my config in lightdm and place in /etc/lightdm/)
-        * place background.jpg in /usr/share/pixmaps/
+1. lightdm (If you want a desktop manager greeter)
+2. lightdm-slick-greeter (use my config in lightdm and place in /etc/lightdm/)
+3. place background.jpg in /usr/share/pixmaps/
 
 ##### To-Be-Fixed
 
