@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # suspend message display: dunst
-# added picom to keep some windows pop-ups from popping up (Signal, etc)
 /usr/bin/pkill -u "$USER" -USR1 /usr/bin/dunst
 /usr/bin/pkill -u "$USER" -USR1 /usr/bin/picom
 
@@ -26,8 +25,7 @@ tmpbg='/tmp/screen.png'
 rm $tmpbg
 
 # resume message display when unlocked
-# added picom to keep some windows pop-ups from popping up (Signal, etc)
-/usr/bin/pkill -u "$USER" -USR2 /usr/bin/picom -cbCf
 /usr/bin/pkill -u "$USER" -USR2 /usr/bin/dunst
+/usr/bin/pkill -u "$USER" -USR2 /usr/bin/picom -cbCf
 
 exit 0

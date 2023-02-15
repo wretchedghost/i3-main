@@ -14,6 +14,8 @@ Here are some pictures of my screen using scrot. The wallpapers are of one my fa
 
 #### i3Blocks
 
+I obsfucated my public IP even though its my tailscale public IP for obvious reasons.
+
 ![my workstation](./Pictures/example/i3blocks.png)
 
 #### urxvt Terminal
@@ -70,3 +72,4 @@ Here are some pictures of my screen using scrot. The wallpapers are of one my fa
 ##### To-Be-Fixed
 
 1. gsimplecal has a weird bug where it will stay popped-up even when you click off of it. Getting rid of it is as simple as hitting $mod+Shift+q when hovered over gsimplecal.
+2. Sometimes the weather API will crash and give an error. I don't know why this happens only sometimes.

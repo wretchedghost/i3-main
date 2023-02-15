@@ -18,11 +18,21 @@ command=$HOME/.config/i3/i3blocks/spotify.py
 color=#81b71a
 interval=5
 
-[weather_NOAA]
-#command=$HOME/.config/i3/i3blocks/weather_NOAA; [[ -z "${BLOCK_BUTTON}" ]] || wego &
-#command=$HOME/.config/i3/i3blocks/weather_NOAA;
-#label=
-interval=1800
+#[gpu-load]
+#command=$HOME/.config/i3/i3blocks/gpu-load
+#label=GPU
+#interval=10
+#min_width=GPU 100% 100% 100% 100%
+#GPU_BRAND=NVIDIA // or AMD
+#T_WARN=70
+#T_CRIT=90
+
+[rofi-wttr]
+command=$HOME/.config/i3/i3blocks/rofi-wttr
+interval=600
+BAR_POSITION=top
+LABEL=🌡️
+LOCATION=Pecos_TX
 
 [iface]
 instance=enp7s0
@@ -85,11 +95,11 @@ separator=true
 #interval=30
 
 [time]
-label=  
-command=/usr/bin/echo "`date '+(%a) %b %d'` <b>`date +'%H:%M:%S'`</b> "; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
+label= 
+command=/usr/bin/echo "`date '+(%a) %b %d'` <b>`date +'%H:%M:%S'`</b> "; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal;
 interval=1
-markup=pango
-separator=true
+#markup=pango
+#separator=true
 
 [dunst]
 command=~/.config/i3/i3blocks/dunst
