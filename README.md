@@ -16,8 +16,9 @@ i3Blocks
 
 ![my workstation](./Pictures/example/i3blocks.png)
 
-# Colors
+#### Colors
 [https://htmlcolorcodes.com/colors/](https://htmlcolorcodes.com/colors/)
+
 #### Prerequirements and recomendations
 
 * Arch (but might work with other distros)
