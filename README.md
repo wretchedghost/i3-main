@@ -22,6 +22,9 @@ I obsfucated my public IP even though its my tailscale public IP for obvious rea
 
 ![my_terminal](./Pictures/example/neofetch.png)
 
+![my_theme](./Pictures/example/lxappearance1.png)
+![my_theme](./Pictures/example/lxappearance2.png)
+
 #### Color Chooser
 [https://htmlcolorcodes.com/colors/](https://htmlcolorcodes.com/colors/)
 
