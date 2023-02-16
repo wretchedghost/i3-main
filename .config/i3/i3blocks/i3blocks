@@ -96,7 +96,7 @@ separator=true
 
 [time]
 label= 
-command=/usr/bin/echo "`date '+(%a) %b %d'` <b>`date +'%H:%M:%S'`</b> "; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal;
+command=/usr/bin/echo "`date '+(%a) %b %d'` <b>`date +'%H:%M:%S'`</b> "; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
 interval=1
 #markup=pango
 #separator=true
