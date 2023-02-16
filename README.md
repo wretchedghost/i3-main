@@ -69,7 +69,7 @@ I obsfucated my public IP even though its my tailscale public IP for obvious rea
 2. place background.jpg in /usr/share/pixmaps/
 3. copy lightdm/ into /etc/lightdm/
 
-![.Pictures/example/lightdm.png](/images/lightdm.png)
+![./Pictures/example/lightdm.png](/images/lightdm.png)
 
 1. copy-in-place libreoffice-writer.desk into ~/.local/share/applications/libreoffice-writer.desktop
 
