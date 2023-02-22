@@ -48,7 +48,7 @@ separator=true
 
 #[wireless]
 #instance=wlan0
-#command=/usr/lib/i3blocks/iface
+#command=$HOME/.config/i3/i3blocks/iface
 #color=#00FF00
 #interval=10
 
