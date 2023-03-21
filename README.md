@@ -18,7 +18,7 @@ I obsfucated my public IP, even though its my tailscale public IP, for obvious r
 
 ![my workstation](./Pictures/example/i3blocks.png)
 
-My bar shows icons, window number, the weather, when VPNs are connected, private IP address, space left in `/`, RAM, CPU usage and temp, a date that you can click on which opens a dropdown menu calendar, the ability to control the CPU speeds (this is meant for laptops), etc.
+My bar shows icons, workspace number, the weather, when VPNs are connected, private IP address, space left in `/`, RAM, CPU usage and temp, a date that you can click on which opens a dropdown menu calendar, the ability to control the CPU speeds (this is meant for laptops), etc.
 
 ## urxvt Terminal
 
