@@ -1,6 +1,6 @@
 # My i3 Setup
 
-What we have here is my latest i3 config for my workstation. My theme is based on three colors. Purple, white, and grey. 
+What we have here is my latest i3 config for my workstation. My theme is based on three colors. Purple, white, and grey with some orange. 
 
 ## Home Screen
 
