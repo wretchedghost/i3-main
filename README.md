@@ -72,14 +72,14 @@ The site I used to find the colors I was looking for.
 
 ## Steps to make your setup look like mine
 
-1. Install `i3-wm` via pacman.
-2. Run `git clone https://github.com/wretchedghost/i3-wretchedbox` in command-line to clone my git repo.
+1. Install all of the prerequisite program above.
+2. Run `git clone https://github.com/wretchedghost/i3-wretchedbox`.
 3. `cd i3-wretchedbox`
 4. `cp .* ~/ && cp -R Pictures/Portugal ~/Pictures/`
 5. Install `lightdm` and `lightdm-slick-greeter` via package manager. Enable lightdm via systemd by running `sudo systemctl enable lightdm lightdm-slick-greeter`
-6. Place `background.jpg` in `/usr/share/pixmaps/`. You will need superuser access to do this.
-7. Copy the contents of the `lightdm` folder into `/etc/lightdm/`. Again you will need superuser access. 
-8. Run `$ source ~/.bashrc` in command-line.
+6. `sudo cp background.jpg /usr/share/pixmaps/`.
+7. `sudo cp lightdm/ /etc/lightdm/`. 
+8. Run `source ~/.bashrc`.
 
 ## What my Lightdm background looks like
 
