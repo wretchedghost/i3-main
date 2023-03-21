@@ -91,6 +91,6 @@ The site I used to find the colors I was looking for.
 
 ## To-Be-Fixed
 
-1. Not really a fix but I am looking at building a script that will install my setup just how I like it. As for right now I have an automated script I built that will install a vanilla arch-linux with no X (GUI) using `ext4`, `LUKS2`, `swapfile`, and a `tmpfs`. 
+* Not really a fix but I am looking at building a script that will install my setup just how I like it. As for right now I have an automated script I built that will install a vanilla arch-linux with no X (GUI) using `ext4`, `LUKS2`, `swapfile`, and a `tmpfs`. 
 
-Check it out here: [https://github.com/wretchedghost/easy-arch-ext4](https://github.com/wretchedghost/easy-arch-ext4)
+* Check it out here: [https://github.com/wretchedghost/easy-arch-ext4](https://github.com/wretchedghost/easy-arch-ext4)
