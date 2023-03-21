@@ -73,8 +73,8 @@ The site I used to find the colors I was looking for.
 ## Step to make your setup to look like mine
 
 1. Install `lightdm` and `lightdm-slick-greeter`
-2. Place background.jpg in `/usr/share/pixmaps/`. You will need superuser access to do this.
-3. Copy the `lightdm/` folder into `/etc/lightdm/`. Again you will need superuser access. 
+2. Place `background.jpg` in `/usr/share/pixmaps/`. You will need superuser access to do this.
+3. Copy the `lightdm` folder into `/etc/lightdm/`. Again you will need superuser access. 
 
 ![Lightdm](./Pictures/example/lightdm.png)
 
