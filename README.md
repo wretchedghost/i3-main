@@ -14,7 +14,7 @@ Here are some pictures of my screen using scrot. The wallpapers are of one my fa
 
 #### i3Blocks
 
-I obsfucated my public IP even though its my tailscale public IP for obvious reasons.
+I obsfucated my public IP, even though its my tailscale public IP, for obvious reasons.
 
 ![my workstation](./Pictures/example/i3blocks.png)
 
