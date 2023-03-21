@@ -2,17 +2,17 @@
 
 What we have here is my latest i3 config for my workstation. My theme is based on three colors. Purple, white, and grey. 
 
-### Pics
+## Home Screen
 
 Here are some pictures of my screen using scrot. The wallpapers are of one my favorite places in the world: Porto, Portugal. Don't mind the gap on the left screen. That is due to my left screen being a 1920x1080 (16:9) while my right screen is a 1920x1200 (16:10).
 
 ![my workstation](./Pictures/example/screen.png)
 
-### Rofi
+## Rofi
 
 ![my workstation](./Pictures/example/rofi_custom.png)
 
-### i3Blocks
+## i3Blocks
 
 I obsfucated my public IP, even though its my tailscale public IP, for obvious reasons.
 
@@ -20,21 +20,24 @@ I obsfucated my public IP, even though its my tailscale public IP, for obvious r
 
 My bar shows icons, window number, the weather, when VPNs are connected, private IP address, space left in `/`, RAM, CPU usage and temp, a date that you can click on which opens a dropdown menu calendar, the ability to control the CPU speeds (this is meant for laptops), etc.
 
-### urxvt Terminal
+## urxvt Terminal
 
 ![my_terminal](./Pictures/example/neofetch.png)
 
 I have customized `neofetch` to show the arch logo and the titles in a custom purple color. It took me a good while to find the color I was looking for. 
 
-### Theme
+## Theme
 
 ![my_theme](./Pictures/example/lxappearance1.png)
 ![my_theme](./Pictures/example/lxappearance2.png)
 
-### Color Chooser
+## Color Chooser
+
+The site I used to find the colors I was looking for.
+
 [https://htmlcolorcodes.com/colors/](https://htmlcolorcodes.com/colors/)
 
-### Prerequisites and recomendations
+## Prerequisites and recomendations
 
 * Arch (This config might work with other distros but I haven't tested it anything other than Arch)
 * i3-wm (The new upstream i3 as i3-gaps was merged with i3-wm **FINALLY**!)
@@ -67,7 +70,7 @@ I have customized `neofetch` to show the arch logo and the titles in a custom pu
 
 * acpi (Only needed if you have a laptop)
 
-### Step to make your setup to look like mine
+## Step to make your setup to look like mine
 
 1. Install `lightdm` and `lightdm-slick-greeter`
 2. Place background.jpg in `/usr/share/pixmaps/`. You will need superuser access to do this.
@@ -77,6 +80,6 @@ I have customized `neofetch` to show the arch logo and the titles in a custom pu
 
 1. Copy-in-place `libreoffice-writer.desk` into `~/.local/share/applications/libreoffice-writer.desktop`
 
-#### To-Be-Fixed
+## To-Be-Fixed
 
 1. Not really a fix but I am looking at building a script that will install my setup just how I like it. As for right now I have an automated script I built that will install arch-linux using `ext4`, `LUKS2`, `swapfile`, and a `tmpfs`. Check it out here: [https://github.com/wretchedghost/easy-arch-ext4](https://github.com/wretchedghost/easy-arch-ext4)
