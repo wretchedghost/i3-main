@@ -76,14 +76,18 @@ The site I used to find the colors I was looking for.
 2. Run `git clone https://github.com/wretchedghost/i3-wretchedbox` in command-line to clone my git repo.
 3. `cd i3-wretchedbox`
 4. `cp .* ~/ && cp -R Pictures/Portugal ~/Pictures/`
-5. Install `lightdm` and `lightdm-slick-greeter` via package manager.
+5. Install `lightdm` and `lightdm-slick-greeter` via package manager. Enable lightdm via systemd by running `sudo systemctl enable lightdm lightdm-slick-greeter`
 6. Place `background.jpg` in `/usr/share/pixmaps/`. You will need superuser access to do this.
 7. Copy the contents of the `lightdm` folder into `/etc/lightdm/`. Again you will need superuser access. 
 8. Run `$ source ~/.bashrc` in command-line.
 
+## What my Lightdm now looks like
+
 ![Lightdm](./background.jpg)
 
-1. Copy-in-place `libreoffice-writer.desk` into `~/.local/share/applications/libreoffice-writer.desktop`
+## Libreoffice uses a different way to work with a theme so follow below to make it look better
+
+1. `cp libreoffice-writer.desktop ~/.local/share/applications/`
 
 ## To-Be-Fixed
 
