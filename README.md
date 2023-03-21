@@ -1,6 +1,6 @@
 # My i3 Setup
 
-What we have here is my latest i3 config for my workstation. 
+What we have here is my latest i3 config for my workstation. My theme is based on three colors. Purple, white, and grey. 
 
 ### Pics
 
@@ -23,6 +23,8 @@ My bar shows icons, window number, the weather, when VPNs are connected, private
 ### urxvt Terminal
 
 ![my_terminal](./Pictures/example/neofetch.png)
+
+I have customized `neofetch` to show the arch logo and the titles in a custom purple color. It took me a good while to find the color I was looking for. 
 
 ### Theme
 
