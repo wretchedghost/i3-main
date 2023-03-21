@@ -70,16 +70,18 @@ The site I used to find the colors I was looking for.
 
 * acpi (Only needed if you have a laptop)
 
-## Step to make your setup to look like mine
+## Steps to make your setup look like mine
 
-0. Run `$ git clone https://github.com/wretchedghost/i3-wretchedbox/` in command-line to clone my git repo.
-1. Install `lightdm` and `lightdm-slick-greeter`
-2. Place `background.jpg` in `/usr/share/pixmaps/`. You will need superuser access to do this.
-3. Copy the `lightdm` folder into `/etc/lightdm/`. Again you will need superuser access. 
-4. Copy `.Xresources`, `.bashrc`, `.fehbg`, `.tmux.conf`, `.config`, `Pictures`, and `.xinitrc` into your home directory.
-5. Run `$ source ~/.bashrc` in command-line.
+1. Install `i3-wm` via pacman.
+2. Run `git clone https://github.com/wretchedghost/i3-wretchedbox` in command-line to clone my git repo.
+3. `cd i3-wretchedbox`
+4. `cp .* ~/ && cp -R Pictures/Portugal ~/Pictures/`
+5. Install `lightdm` and `lightdm-slick-greeter` via package manager.
+6. Place `background.jpg` in `/usr/share/pixmaps/`. You will need superuser access to do this.
+7. Copy the contents of the `lightdm` folder into `/etc/lightdm/`. Again you will need superuser access. 
+8. Run `$ source ~/.bashrc` in command-line.
 
-![Lightdm](./Pictures/example/lightdm.png)
+![./Pictures/example/lightdm.png](./Pictures/example/lightdm.png)
 
 1. Copy-in-place `libreoffice-writer.desk` into `~/.local/share/applications/libreoffice-writer.desktop`
 
