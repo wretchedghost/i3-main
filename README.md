@@ -81,7 +81,7 @@ The site I used to find the colors I was looking for.
 7. Copy the contents of the `lightdm` folder into `/etc/lightdm/`. Again you will need superuser access. 
 8. Run `$ source ~/.bashrc` in command-line.
 
-![Lightdm](./lightdm.png)
+![Lightdm](./background.jpg)
 
 1. Copy-in-place `libreoffice-writer.desk` into `~/.local/share/applications/libreoffice-writer.desktop`
 
