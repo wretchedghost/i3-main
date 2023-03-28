@@ -69,6 +69,25 @@ The site I used to find the colors I was looking for.
 ### Laptop
 
 * acpi (Only needed if you have a laptop)
+* To allow for laptop lid to enable `i3lock`, create this file and add the below config to `/etc/systemd/system/sleep.target.wants/screenlock.service`:
+    
+```bash
+[Unit]
+Description=Starts i3lock at suspend time
+Before=sleep.target
+
+[Service]
+User=<YOURUSERNAME>
+Type=forking
+Environment=DISPLAY=:0
+ExecStartPre=
+ExecStart=$HOME/.config/i3/scripts/lock_and_blur.sh
+
+[Install]
+WantedBy=sleep.target
+```
+
+Change `User=` to your username and `ExecStart=` to the location where your i3lock.sh or other config is located.
 
 ## Steps to make your setup look like mine
 
