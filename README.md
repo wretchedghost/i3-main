@@ -77,7 +77,7 @@ Description=Starts i3lock at suspend time
 Before=sleep.target
 
 [Service]
-User=<YOURUSERNAME>
+User=wretchedghost
 Type=forking
 Environment=DISPLAY=:0
 ExecStartPre=
