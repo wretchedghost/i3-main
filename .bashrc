@@ -1,6 +1,9 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Don't put duplicate lines in the history and do not add lines that start with a space
 # I want to see if turning off dups will allow me to always have my commands duplicated on every new terminal
 #HISTCONTROL=erasedups:ignoredups:ignorespace

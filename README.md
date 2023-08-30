@@ -7,7 +7,7 @@ Here are some pictures of my screen using scrot. The wallpapers are of one my fa
 ![my workstation](./Pictures/example/screen.png)
 
 ## Rofi
-Here is my custom config that make rofi look good, transparent, and highlights the last run program for easy access.
+Here is my custom config that makes rofi look good, transparent, and highlights the last run program for easy access.
 
 ![my workstation](./Pictures/example/rofi_custom.png)
 
@@ -34,7 +34,7 @@ The site I used to find the colors I was looking for.
 
 ## Prerequisites and some recomendations
 * Arch (This config might work with other distros but I haven't tested it anything other than Arch)
-* i3-wm (The new upstream i3 as i3-gaps was merged with i3-wm **FINALLY**!)
+* i3-wm (Desktop Environment)
 * i3blocks (Top Menu Bar)
   * NetworkManager (Needed for nm-vpn Blocket)
   * networkmanager-openvpn
@@ -92,7 +92,7 @@ Change `User=` to your username and `ExecStart=` to the location where your i3lo
 2. Run `git clone https://github.com/wretchedghost/i3-wretchedbox`.
 3. `cd i3-wretchedbox`
 4. `cp .* ~/ && cp -R Pictures/Portugal ~/Pictures/`
-5. Install `lightdm` and `lightdm-slick-greeter` via package manager. Enable lightdm via systemd by running `sudo systemctl enable lightdm lightdm-slick-greeter`
+5. Install `lightdm-slick-greeter` via package manager. Enable lightdm via systemd by running `sudo systemctl enable lightdm`
 6. `sudo cp background.jpg /usr/share/pixmaps/`.
 7. `sudo cp lightdm/ /etc/lightdm/`. 
 8. Run `source ~/.bashrc`.
@@ -100,13 +100,7 @@ Change `User=` to your username and `ExecStart=` to the location where your i3lo
 ## What my Lightdm background looks like
 
 ![Lightdm](./background.jpg)
-
 ## Libreoffice uses a different way to work with a theme so follow below to make it look better
 
 1. cd i3-wretchedbox
 2. cp libreoffice-writer.desktop ~/.local/share/applications/
-
-## To-Be-Fixed
-
-* Not really a fix but I am looking at building a script that will install my setup just how I like it. As for right now I have an automated script I built that will install a vanilla arch-linux with no X (GUI) using `ext4`, `LUKS2`, `swapfile`, and a `tmpfs`. 
-    * Check it out here: [https://github.com/wretchedghost/easy-arch-ext4](https://github.com/wretchedghost/easy-arch-ext4)
