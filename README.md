@@ -66,26 +66,27 @@ The site I used to find the colors I was looking for.
 * vimix-cursors
 
 ### For laptops
-* acpi
-* To allow for laptop lid to enable `i3lock`, create this file and add the below config to `/etc/systemd/system/sleep.target.wants/screenlock.service`:
+* To allow for laptop lid to enable `i3lock`, create this file and add the below config to `/etc/systemd/system/suspend@.service`:
 
 ```text
 [Unit]
-Description=Starts i3lock at suspend time
+Description=User suspend actions
 Before=sleep.target
 
 [Service]
-User=wretchedghost
+User=%I
 Type=forking
 Environment=DISPLAY=:0
-ExecStartPre=
-ExecStart=$HOME/.config/i3/scripts/lock_and_blur.sh
+ExecStart=/home/wretchedghost/.config/i3/scripts/lock_and_blur.sh
+ExecStartPost=/usr/bin/sleep 1
 
 [Install]
 WantedBy=sleep.target
 ```
 
-Change `User=` to your username and `ExecStart=` to the location where your i3lock.sh or other config is located.
+Change `ExecStart=` to the location where your i3lock.sh or lock_and_blur.sh is located. 
+
+Then enable by running `sudo systemctl enable suspend@user.service` (with your username instead of `user`).
 
 ## Steps to make your setup look like mine
 1. Install all of the prerequisite program above.
