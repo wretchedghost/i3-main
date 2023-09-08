@@ -32,7 +32,8 @@ command=$HOME/.config/i3/i3blocks/rofi-wttr
 interval=600
 BAR_POSITION=top
 LABEL=🌡️
-LOCATION=Pecos_TX
+# Change to your location by town and state in the below format
+LOCATION=Austin_TX
 
 [iface]
 instance=enp7s0
