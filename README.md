@@ -92,7 +92,7 @@ Then enable by running `sudo systemctl enable suspend@user.service` (with your u
 1. Install all of the prerequisite program above.
 2. Run `git clone https://github.com/wretchedghost/i3-wretchedbox`.
 3. `cd i3-wretchedbox`
-4. `cp .* ~/ && cp -R Pictures/Portugal ~/Pictures/`
+4. `cp -R Pictures/Portugal ~/Pictures/`
 5. Install `lightdm-slick-greeter` via package manager. Enable lightdm via systemd by running `sudo systemctl enable lightdm`
 6. `sudo cp background.jpg /usr/share/pixmaps/`.
 7. `sudo cp lightdm/ /etc/lightdm/`. 
