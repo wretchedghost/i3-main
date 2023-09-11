@@ -95,7 +95,7 @@ Then enable by running `sudo systemctl enable suspend@user.service` (with your u
 4. `cp -R Pictures/Portugal ~/Pictures/`
 5. Install `lightdm-slick-greeter` via package manager. Enable lightdm via systemd by running `sudo systemctl enable lightdm`
 6. `sudo cp background.jpg /usr/share/pixmaps/`.
-7. `sudo cp lightdm/ /etc/lightdm/`. 
+7. `sudo cp -R lightdm/ /etc/lightdm/`. 
 8. Run `source ~/.bashrc`.
 
 ## What my Lightdm background looks like
