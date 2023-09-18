@@ -148,6 +148,7 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 #-----------------------------------------------------------------FLOATING WINDOWS
 
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
+for_window [class="Nm-connection-editor" instance="nm-connection-editor"] floating enable
 for_window [class="Galculator"] floating enable border pixel 1
 for_window [title="File Transfer"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
