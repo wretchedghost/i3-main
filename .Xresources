@@ -45,3 +45,7 @@ URxvt.resize-font.bigger: C-k
 
 ! Scrollback size
 URxvt.saveLines: 200000
+
+! Change the dpi scaling
+*dpi: 125
+Xft.dpi: 125
