@@ -2,12 +2,14 @@
 What we have here is my latest i3 config for my workstation. My theme is based on three colors: purple, white, and grey, with hints of orange. 
 
 ## Home Screen
-Here are some pictures of my screen using scrot. The wallpapers are of one my favorite places in the world: Porto, Portugal. ***Don't mind the gap on the left screen.*** That is due to my left screen being a 1920x1080 (16:9) while my right screen is a 1920x1200 (16:10), but it only looks like this in the screenshot not on the hardware itself. 
+Here are some pictures of my screen using scrot. The wallpapers are of one my favorite places in the world: Porto, Portugal. They rotate every login using my .fehbg script that is run everytime your login. You can force a backgroud change by running **./fehbg**.
+
+***Don't mind the gap on the left screen.*** That is due to my left screen being a 1920x1080 (16:9) while my right screen is a 1920x1200 (16:10), but it only looks like this in the screenshot not on the hardware itself. 
 
 ![my workstation](./Pictures/example/screen.png)
 
 ## Rofi
-Here is my custom config that makes rofi look good, transparent, and highlights the last run program for easy access.
+Here is what my custom config looks like which includes transparency and highlights the last run program for easy access.
 
 ![my workstation](./Pictures/example/rofi_custom.png)
 
@@ -18,10 +20,12 @@ I obsfucated my public IP, even though its my tailscale public IP, for obvious r
 
 My bar shows icons, workspace number, the weather, when VPNs are connected, private IP address, space left in `/`, RAM, CPU usage and temp, a date that you can click on which opens a dropdown menu calendar, the ability to control the CPU speeds (this is meant for laptops), etc.
 
+You will need to change the weather to your city_State in the **~/.config/i3/i3blocks/i3blocks** file under [rofi-wttr]->Location.
+
 ## urxvt Terminal
 ![my_terminal](./Pictures/example/neofetch.png)
 
-I have customized `neofetch` to show the arch logo and the titles in a custom purple color. It took me a good while to find the color I was looking for. You can find it at the bottom of my .bashrc file.
+I have customized `neofetch` to show the arch logo and the titles in a custom purple color. It took me a good while to find the color I was looking for. You can find it at the bottom of my .bashrc file. You also need to copy the .Xresources file to your home directory to get urxvt to look like mine. It also carries a few sane features needed in a terminal. 
 
 ## Theme
 ![my_theme](./Pictures/example/lxappearance1.png)
