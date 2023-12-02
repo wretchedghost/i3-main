@@ -156,13 +156,13 @@ for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [window_role="About"] floating enable
 for_window [class="Pcmanfm"] floating enable move position right
-    for_window [class="Pcmanfm"] resize set 820 640
+    for_window [class="Pcmanfm"] resize set 900 700
 for_window [class="Thunar"] floating enable move position right
-    for_window [class="Thunar"] resize set 820 640
+    for_window [class="Thunar"] resize set 900 700
 for_window [class="feh"] floating enable move position right
     for_window [class="feh"] resize set 820 640
 for_window [class="org.gnome.Nautilus"] floating enable move position right
-    for_window [class="org.gnome.Nautilus"] resize set 820 640
+    for_window [class="org.gnome.Nautilus"] resize set 900 700
 for_window [class="Lxappearance"] floating enable stick enable border normal
 for_window [class="Arandr"] floating enable
     for_window [class="Arandr"] resize set 640 480
@@ -172,7 +172,7 @@ for_window [class="(?i)wego"] floating enable, move position mouse, move down 28
 for_window [title="term"] floating enable move position center
     for_window [title="term"] resize set 900 40
 for_window [title="^WinBox"] floating enable
-    for_window [title="^WinBox"] resize set 720 480
+    for_window [title="^WinBox"] resize set 800 500
 #for_window [class="Yad"] floating enable
 
 # Sticky floating windows. Only takes effect if the windows is floating
