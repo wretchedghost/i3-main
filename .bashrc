@@ -185,4 +185,6 @@ mvg ()
     fi
 }
 
+export PATH=/home/wretchedghost/bin:$PATH
+
 neofetch --colors 129 7 129 129 7 7 --ascii_colors 129 129 --ascii_distro arch --color_blocks off
