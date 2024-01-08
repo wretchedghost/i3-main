@@ -167,9 +167,10 @@ alias exi="exit"
 alias exti="exit"
 alias xit="exit"
 
-# Alias for Git committing and pushing
+# Alias for Git committing and pushing. gitsync pulls all git in current folder
 alias gitc="git add . && git commit -m" # + commit message
 alias gitp="git push" # + remote & branch names
+alias gitsync="ls | xargs -P10 -I{} git -C {} pull"
 
 # Changes dir color in terminal or tty (30:black, 31:red, 32:green, 33:yellow, 34:blue, 35:purple, 36:cyan, 37:white)
 # Use di=1;4;33 to make directories (1) bold, (4) underlined, and (33) yellow
